@@ -30,7 +30,8 @@ public class ChatClient extends JFrame implements ActionListener, Runnable {
         bottom.setLayout(new BorderLayout());
         input = new JTextField();
 
-        sendBtn = new JButton("send");
+
+        sendBtn = new ButtonChange("send");
 
         bottom.add("Center", input);
         bottom.add("East", sendBtn);
@@ -84,6 +85,7 @@ public class ChatClient extends JFrame implements ActionListener, Runnable {
     }
 
     public void service () {
+
         String serverIP = JOptionPane.showInputDialog(this, "Enter the Server IP", "192.168.?.?");
         if (serverIP == null || serverIP.length() == 0) {
             System.out.println("Didn't enter Server IP");
