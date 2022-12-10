@@ -19,7 +19,16 @@ public class ChatClient extends JFrame implements ActionListener, Runnable {
     private ObjectOutputStream writer = null;
     private String nickName;
 
+
     public ChatClient() {
+        Logo lg = new Logo();
+        try {
+            Thread.sleep(1000);
+            lg.setVisible(false);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
         output = new JTextArea();
         output.setFont(new Font("맑은 고딕", Font.BOLD, 15));
         output.setEditable(false);
